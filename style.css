@@ -26,6 +26,8 @@
   background: linear-gradient(90deg, #f7e93f, #fb09b4, #9100f8);
   border-radius: 1000px;
   border: none;
+  display: flex;
+  align-items: center;
 }
 
 /* Header Styles */
@@ -39,7 +41,7 @@ nav {
 nav h2 {
   color: #ffffff;
   font-weight: bold;
-  font-size: 40px
+  font-size: 40px;
 }
 .gradient-text {
   background: linear-gradient(90deg, #f7e93f, #fb09b4, #9100f8);
@@ -58,4 +60,98 @@ nav h2 {
   font-size: 16px;
   font-weight: 500;
   color: #ffffff;
+}
+
+/* banner Section */
+.banner {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url("./assets/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+.circle {
+  position: relative;
+  top: 10vh;
+}
+
+.microphone {
+  position: relative;
+  bottom: 27vh;
+}
+#badge {
+  background-color: #00ff88;
+  color: #1a0b2e;
+  border-radius: 100px;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border: none;
+
+  position: relative;
+  z-index: 4;
+  bottom: 65vh;
+  left: 7vw;
+}
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  bottom: 15vh;
+}
+.banner-content h2 {
+  font-size: 60px;
+  font-weight: 800;
+}
+
+.banner-content p {
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+button img {
+  padding-right: 10px;
+}
+#green-btn {
+  background: transparent;
+  border: 2px solid #00ff88;
+}
+.btn-group {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+@media screen and (min-width: 576px) {
+  .hamburger-menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  nav .menu,
+  nav .btn {
+    display: none;
+  }
+  nav {
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  #badge{
+    left:18vw;
+    bottom:66vh;
+  }
 }
