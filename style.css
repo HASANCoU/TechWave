@@ -78,7 +78,7 @@ nav h2 {
 /* banner Section */
 .banner {
   position: relative;
-  width: 100vw;
+  width: 100%;
   background-image: url("./assets/hero-bg.png");
   background-size: cover;
   background-position: center;
@@ -301,6 +301,53 @@ hr {
   padding: 10px;
   border-radius: 50%;
 }
+
+footer {
+  background-image: url("./assets/footer-bg.png");
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  background-position: center;
+  padding: 120px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.footer-container h2 {
+  font-size: 50px;
+}
+
+.footer-links ul {
+  list-style: none;
+  gap: 20px;
+  margin-top: 34px;
+  margin-bottom: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.footer-links ul a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.footer-links ul li a {
+  display: flex;
+  gap: 10px;
+}
+.footer-links p {
+  text-align: center;
+}
+
+/* Mobile Responsive */
 @media screen and (max-width: 576px) {
   nav .menu,
   nav .btn {
@@ -396,6 +443,15 @@ hr {
     justify-content: center;
     align-items: center;
   }
+  footer {
+    padding: 40px 20px;
+  }
+  .footer-links ul {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 @media screen and (min-width: 576px) and (max-width: 992px) {
@@ -404,5 +460,67 @@ hr {
   }
   .number-card-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .episodes-container {
+    display: gird;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 16px;
+  }
+  .host-section {
+    padding: 40px 20px;
+  }
+  .host {
+    flex-direction: column;
+    text-align: center;
+  }
+  .host-information p {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .host-information ul {
+    justify-content: center;
+    align-items: center;
+  }
+  .advantage {
+    padding: 20px;
+  }
+  .advantage-container {
+    padding: 5px;
+    gap: 16px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, fr);
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five";
+  }
+  .advantage h2 {
+    font-size: 32px;
+    padding-bottom: 16px;
+  }
+  .circle {
+    width: 50vw;
+  }
+  .microphone {
+    bottom: 7vh;
+    width: 60px;
+  }
+  .banner-content {
+    bottom: 1vh;
+  }
+  .banner-content h2 {
+    font-size: 60px;
+  }
+  nav .menu,
+  nav .btn {
+    display: none;
+  }
+  nav {
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-size: cover;
   }
 }
