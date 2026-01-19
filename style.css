@@ -29,6 +29,12 @@
   display: flex;
   align-items: center;
 }
+
+.btn:hover {
+  background: linear-gradient(90deg, #e6d83a, #e1079f, #7a00d6);
+  cursor: pointer;
+}
+
 .section-title {
   font-size: 48px;
   font-weight: bold;
@@ -43,6 +49,7 @@
   line-height: 24px;
   color: #ffffff;
 }
+
 /* Header Styles */
 
 nav {
@@ -125,18 +132,29 @@ nav h2 {
 
   bottom: 10vh;
 }
-
+.banner-content h2 {
+  font-size: 60px;
+  font-weight: 800;
+}
 .banner-content p {
   margin-top: 8px;
   margin-bottom: 24px;
 }
+
 button img {
   padding-right: 10px;
 }
 #green-btn {
   background: transparent;
   border: 2px solid #00ff88;
+  color: #00ff88;
+  transition: all 0.3s ease;
 }
+
+#green-btn:hover {
+  color: #ffffff;
+}
+
 .btn-group {
   display: flex;
   gap: 8px;
@@ -302,6 +320,8 @@ hr {
   border-radius: 50%;
 }
 
+/* Footer Section Design */
+
 footer {
   background-image: url("./assets/footer-bg.png");
   position: relative;
@@ -346,12 +366,18 @@ footer {
 .footer-links p {
   text-align: center;
 }
+.hamburger-menu {
+  display: none;
+}
 
 /* Mobile Responsive */
 @media screen and (max-width: 576px) {
   nav .menu,
   nav .btn {
     display: none;
+  }
+  .hamburger-menu {
+    display: block;
   }
   nav {
     justify-content: space-between;
@@ -454,15 +480,15 @@ footer {
   }
 }
 
-@media screen and (min-width: 576px) and (max-width: 992px) {
+/* Medium Device query */
+@media screen and (min-width: 576px) and (max-width: 1300px) {
   .hamburger-menu {
     display: none;
   }
   .number-card-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
   .episodes-container {
-    display: gird;
     grid-template-columns: repeat(1, 1fr);
     gap: 16px;
   }
@@ -522,5 +548,62 @@ footer {
     padding-left: 20px;
     padding-right: 20px;
     background-size: cover;
+  }
+}
+
+/* @media screen and (max-width: 1300px) {
+  .episodes-container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: baseline;
+  }
+} */
+
+/* Animation */
+
+.circle {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate {
+  animation: popIn 1s ease-out forwards;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.pulse-text {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+#badge {
+  animation: pulse 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
   }
 }
