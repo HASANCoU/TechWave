@@ -29,7 +29,20 @@
   display: flex;
   align-items: center;
 }
-
+.section-title {
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+.advantage-card p,
+.description,
+.number-card p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
 /* Header Styles */
 
 nav {
@@ -110,11 +123,7 @@ nav h2 {
   align-items: center;
   position: relative;
 
-  bottom: 15vh;
-}
-.banner-content h2 {
-  font-size: 60px;
-  font-weight: 800;
+  bottom: 10vh;
 }
 
 .banner-content p {
@@ -184,19 +193,39 @@ button img {
   font-size: 24px;
   font-weight: bold;
 }
-.advantage-card p {
-  font-size: 16px;
-  line-height: 24px;
-}
 .advantage-card img {
   height: 60px;
   width: 60px;
 }
-@media screen and (min-width: 576px) {
-  .hamburger-menu {
-    display: none;
-  }
+
+/* About Section */
+.about {
+  padding: 50px 200px 120px 200px;
+  text-align: center;
 }
+
+hr {
+  border: none;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.2);
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.number-card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.number-card {
+  text-align: center;
+}
+.number-card h2 {
+  color: #00ff88;
+  margin-bottom: 16px;
+  font-size: 48px;
+  font-weight: 900px;
+}
+
+
 
 @media screen and (max-width: 576px) {
   nav .menu,
@@ -236,24 +265,44 @@ button img {
   .circle {
     width: 50vw;
   }
-  .microphone{
+  .microphone {
     bottom: 7vh;
     width: 60px;
   }
-  .banner-content{
+  .banner-content {
     bottom: 1vh;
   }
   .banner-content h2 {
     font-size: 60px;
   }
-  
+
   .banner {
     padding-bottom: 10px;
     background-image: ur("./assets/mobile-hero.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
-  .banner-content h2{
+
+  .about {
+    padding: 40px 20px;
+  }
+  .section-title {
+    font-size: 32px;
+  }
+  .banner-content h2 {
     font-size: 40px;
+  }
+  .number-card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .hamburger-menu {
+    display: none;
+  }
+  .number-card-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
