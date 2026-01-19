@@ -189,9 +189,10 @@ button img {
   padding: 40px;
   border-radius: 40px;
 }
-.advantage-card h3 {
+.advantage-card h3, {
   font-size: 24px;
   font-weight: bold;
+  color:#ffffff;
 }
 .advantage-card img {
   height: 60px;
@@ -225,7 +226,44 @@ hr {
   font-weight: 900px;
 }
 
+.episodes{
+    padding: 120px 200px;
+}
+.episodes h2{
+    margin-bottom: 40px;
+}
 
+.episodes-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.episodes-card{
+    width: 380px;
+    background-color: #250d44;
+    border-radius: 16px;
+}
+.episodes-card p{
+    margin: 24px 24px 12px 24px;
+}
+
+.episodes-card h6{
+    color: #00FF88;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    margin: 12px 24px 24px 24px;
+    display: flex;
+    align-items: center;
+    gap: 5px;;
+
+}
+.episodes-card h3{
+    color:#ffffff;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 24px 24px 12px 24px;
+}
 
 @media screen and (max-width: 576px) {
   nav .menu,
@@ -294,6 +332,13 @@ hr {
   }
   .number-card-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .episodes{
+    padding: 40px 20px;
+  }
+  .episodes-container{
+    grid-template-columns: repeat(1,1fr);
   }
 }
 
