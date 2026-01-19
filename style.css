@@ -65,8 +65,7 @@ nav h2 {
 /* banner Section */
 .banner {
   position: relative;
-  height: 100vh;
-  width: 100%;
+  width: 100vw;
   background-image: url("./assets/hero-bg.png");
   background-size: cover;
   background-position: center;
@@ -82,11 +81,13 @@ nav h2 {
 .circle {
   position: relative;
   top: 10vh;
+  width: 400px;
 }
 
 .microphone {
   position: relative;
   bottom: 27vh;
+  width: 80px;
 }
 #badge {
   background-color: #00ff88;
@@ -133,6 +134,64 @@ button img {
   align-items: center;
 }
 
+/* Advantage Section */
+.advantage {
+  padding: 120px 200px;
+}
+
+.advantage-container {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "one two two"
+    "one three three"
+    "four four five";
+}
+#one {
+  grid-area: one;
+}
+#two {
+  grid-area: two;
+}
+#three {
+  grid-area: three;
+}
+#four {
+  grid-area: four;
+}
+#five {
+  grid-area: five;
+}
+.advantage h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 48px;
+  color: #ffffff;
+  padding-bottom: 40px;
+}
+.advantage-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #351165;
+  color: #ffffff;
+  padding: 40px;
+  border-radius: 40px;
+}
+.advantage-card h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+.advantage-card p {
+  font-size: 16px;
+  line-height: 24px;
+}
+.advantage-card img {
+  height: 60px;
+  width: 60px;
+}
 @media screen and (min-width: 576px) {
   .hamburger-menu {
     display: none;
@@ -148,10 +207,53 @@ button img {
     justify-content: space-between;
     padding-left: 20px;
     padding-right: 20px;
+    background-size: cover;
   }
 
-  #badge{
-    left:18vw;
-    bottom:66vh;
+  #badge {
+    left: 11vw;
+    bottom: 230px;
+  }
+  .advantage {
+    padding: 20px;
+  }
+  .advantage-container {
+    padding: 5px;
+    gap: 16px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, fr);
+    grid-template-areas:
+      "one"
+      "two"
+      "three"
+      "four"
+      "five";
+  }
+  .advantage h2 {
+    font-size: 32px;
+    padding-bottom: 16px;
+  }
+  .circle {
+    width: 50vw;
+  }
+  .microphone{
+    bottom: 7vh;
+    width: 60px;
+  }
+  .banner-content{
+    bottom: 1vh;
+  }
+  .banner-content h2 {
+    font-size: 60px;
+  }
+  
+  .banner {
+    padding-bottom: 10px;
+    background-image: ur("./assets/mobile-hero.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .banner-content h2{
+    font-size: 40px;
   }
 }
