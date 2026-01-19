@@ -189,10 +189,10 @@ button img {
   padding: 40px;
   border-radius: 40px;
 }
-.advantage-card h3, {
+.advantage-card h3 {
   font-size: 24px;
   font-weight: bold;
-  color:#ffffff;
+  color: #ffffff;
 }
 .advantage-card img {
   height: 60px;
@@ -226,45 +226,81 @@ hr {
   font-weight: 900px;
 }
 
-.episodes{
-    padding: 120px 200px;
+.episodes {
+  padding: 120px 200px;
 }
-.episodes h2{
-    margin-bottom: 40px;
-}
-
-.episodes-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-.episodes-card{
-    width: 380px;
-    background-color: #250d44;
-    border-radius: 16px;
-}
-.episodes-card p{
-    margin: 24px 24px 12px 24px;
+.episodes h2 {
+  margin-bottom: 40px;
 }
 
-.episodes-card h6{
-    color: #00FF88;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 24px;
-    margin: 12px 24px 24px 24px;
-    display: flex;
-    align-items: center;
-    gap: 5px;;
-
+.episodes-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
-.episodes-card h3{
-    color:#ffffff;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 24px 24px 12px 24px;
+.episodes-card {
+  width: 380px;
+  background-color: #250d44;
+  border-radius: 16px;
+}
+.episodes-card p {
+  margin: 24px 24px 12px 24px;
 }
 
+.episodes-card h6 {
+  color: #00ff88;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 12px 24px 24px 24px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.episodes-card h3 {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 24px 24px 12px 24px;
+}
+
+/* Host Section */
+.host-section {
+  padding: 0px 200px 120px 200px;
+}
+.host {
+  background-color: #250b45fd;
+  border-radius: 40px;
+
+  padding: 48px 40px;
+  display: flex;
+  gap: 24px;
+}
+.host h3 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.host-information {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap:;
+}
+
+.host-information ul {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+}
+.host-information ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(241, 171, 227);
+  padding: 10px;
+  border-radius: 50%;
+}
 @media screen and (max-width: 576px) {
   nav .menu,
   nav .btn {
@@ -334,14 +370,33 @@ hr {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .episodes{
+  .episodes {
     padding: 40px 20px;
   }
-  .episodes-container{
-    grid-template-columns: repeat(1,1fr);
+  .episodes-container {
+    display: gird;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .episodes-card {
+    width: 90vw;
+  }
+
+  .host-section {
+    padding: 40px 20px;
+  }
+  .host {
+    flex-direction: column;
+    text-align: center;
+  }
+  .host-information p {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .host-information ul {
+    justify-content: center;
+    align-items: center;
   }
 }
-
 
 @media screen and (min-width: 576px) and (max-width: 992px) {
   .hamburger-menu {
